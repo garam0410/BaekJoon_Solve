@@ -2,7 +2,11 @@ subject_count = int(input())
 
 score = input().split()
 
+for i in range(0, len(score)) : 
+    score[i] = int(score[i])
+
 max = 0
+result = 0
 
 for i in range (0, subject_count) : 
     if score[i] > max : 
@@ -10,5 +14,6 @@ for i in range (0, subject_count) :
 
 for i in range(0, subject_count) : 
     score[i] = score[i] / max * 100
+    result += score[i]
 
-print(score)
+print(result/subject_count)
